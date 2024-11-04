@@ -2,12 +2,12 @@
 services:
   redis-server:
     image: "redis:latest"
-    container_name: "redis-server"
+    container_name: "redis-container"
     ports:
       - "6379:6379"
   redis-counter:
     build: .
-    container_name: "redis-counter-application"
+    container_name: "counter-container"
     restart: always
     ports:
       - "8081:8081"
