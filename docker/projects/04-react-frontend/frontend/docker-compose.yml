@@ -1,0 +1,13 @@
+services:
+  react-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: react-container
+    # Port mapping: No need for quotes here as these are simple port numbers.
+    ports:
+      - 3000:3000  # No quotes needed unless using special characters or complex values
+    volumes:
+      # Volume mappings: No quotes needed here either, unless paths have special characters.
+      - /app/node_modules  # This prevents overwriting node_modules inside the container
+      - .:/app  # Mount the current directory to /app in the container
