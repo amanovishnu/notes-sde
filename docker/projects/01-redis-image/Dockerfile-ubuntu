@@ -1,8 +1,0 @@
-FROM ubuntu:latest
-
-RUN apt update -y
-RUN apt upgrade -y
-RUN apt install redis -y
-
-EXPOSE 6379
-CMD ["redis-server"]
